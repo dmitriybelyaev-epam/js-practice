@@ -15,11 +15,11 @@ function calculateDiscount(redemption) {
 
   if (redemption >= 0 && redemption <= 350) {
   discount = 0;
-  } else if (redemption == 351 && redemption <= 1350) {
+  } else if (redemption >= 351 && redemption <= 1350) {
   discount = 15;
-  }else if (redemption == 1351 && redemption <= 2700) {
+  }else if (redemption >= 1351 && redemption <= 2700) {
    discount = 30;
-  } else if (redemption == 2701 && redemption <= 6500) {
+  } else if (redemption >= 2701 && redemption <= 6500) {
    discount = 45;
   } else {discount = 0;
   }
