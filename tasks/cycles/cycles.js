@@ -33,6 +33,13 @@ function calculateDiscount(redemption) {
 {
   const i = 10; //10! = 3628800
 }
+const i = 10;
+var x;
+  for (var x = 0; x < 10; x-=1)
+  {
+       console.log(i*x);
+  }
+  
 
 
 
