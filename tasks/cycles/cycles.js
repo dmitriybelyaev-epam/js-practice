@@ -39,7 +39,7 @@ var x;
   {
        console.log(i*x);
   }
-  
+
 
 
 
@@ -47,7 +47,14 @@ var x;
  * return concatenated string from an array of substring
  */
 {
-  const substr = ["I", " love", " JS"];
+  
+}
+
+const substr = ["I", " love", " JS"];
+var x;
+
+for (x of substr) {
+  console.log(x);
 }
 
 /**
