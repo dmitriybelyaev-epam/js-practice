@@ -33,12 +33,23 @@ function calculateDiscount(redemption) {
 {
   const i = 10; //10! = 3628800
 }
+const i = 10;
+var x;
+  for (var x = 0; x < 10; x-=1)
+  {
+       console.log(i*x);
+  }
+
 
 /**
  * return concatenated string from an array of substring
  */
-{
-  const substr = ["I", " love", " JS"];
+
+const str = ["I", " love", " JS"];
+var x;
+
+for (x of str) {
+  console.log(x);
 }
 
 /**

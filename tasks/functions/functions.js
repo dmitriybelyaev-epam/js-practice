@@ -38,8 +38,10 @@ function getShortest(wordArray) {
  * write function that returns word google with given numbers of "o" symbols
  * e.g getGoogle(5) should return "gooooogle"
  */
-function getGoogle(n) {
 
+function getGoogle(n) {
+    let letter = 'o';
+    console.log(letter.repeat(3));
 }
 
 /**
