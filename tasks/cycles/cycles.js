@@ -33,14 +33,36 @@ function calculateDiscount(redemption) {
 {
   const i = 10; //10! = 3628800
 }
+
+//Answer using For
+
 const i = 10;
-var x;
-  for (var x = 0; x < 10; x-=1)
-  {
-       console.log(i*x);
-  }
+var z = 1;
+for (x = 1; x <= i; x++) z = z * x;
+console.log(z);
 
+//Answer using While
 
+const i = 10;
+var z = 1;
+var x = 1;
+while (x <= i) {
+  z = z * x;
+  x++;
+  console.log(z)
+}
+
+//Answer using do..while
+
+const i = 10;
+var z = 1;
+var x = 1;
+do {
+  z = z * x;
+  x++;
+}
+while (x <= i);
+console.log(z)  
 
 
 /**
@@ -70,3 +92,5 @@ for (x of substr) {
 }
 
 module.exports = calculateDiscount;
+
+//¯\_(ツ)_/¯
