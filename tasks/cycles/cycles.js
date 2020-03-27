@@ -74,10 +74,9 @@ console.log(z)
 
 const substr = ["I", " love", " JS"];
 var x;
-
-for (x of substr) {
+for (x of substr) 
   console.log(x);
-}
+
 
 /**
  * calculate a total of income of certain person
@@ -93,4 +92,17 @@ for (x of substr) {
 
 module.exports = calculateDiscount;
 
-//¯\_(ツ)_/¯
+//Answer
+
+const personIncomes = {
+  salary: 1985,
+  rent: -600,
+  interestOnDeposit: 250,
+  otherExpences: -300
+};
+let sum = 0;
+for (let elem in personIncomes) {
+  sum += personIncomes[elem];
+}
+console.log(sum);
+
