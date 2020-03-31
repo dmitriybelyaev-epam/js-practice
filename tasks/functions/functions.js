@@ -60,7 +60,7 @@ return shortestWord;
 
 function getGoogle(n) {
   let letter = 'o'.repeat(n);
-    return "g" + letter.repeat(1) + "gle";
+    return "g" + letter + "gle";
     }
 
 
@@ -75,11 +75,11 @@ function getGoogle(n) {
  * }
  */
 
-function getUser(firstName, lastName, age) {
+function getUser(firstName = 'John', lastName, age = null) {
 
     return {
         firstName: firstName || null,
-        lastName: lastName || null,
+        lastName: lastName|| null,
         age: age || null
     };
 }
