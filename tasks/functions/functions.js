@@ -75,12 +75,12 @@ function getGoogle(n) {
  * }
  */
 
-function getUser(firstName = 'John', lastName, age = null) {
+function getUser(firstName = null, lastName = null, age = null) {
 
     return {
-        firstName: firstName || null,
-        lastName: lastName|| null,
-        age: age || null
+        firstName,
+        lastName,
+        age
     };
 }
 
