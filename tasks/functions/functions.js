@@ -80,7 +80,7 @@ function getUser(firstName = null, lastName = null, age = null) {
     return {
         firstName,
         lastName,
-        age
+        age 
     };
 }
 
