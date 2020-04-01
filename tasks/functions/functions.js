@@ -59,8 +59,7 @@ return shortestWord;
  */
 
 function getGoogle(n) {
-  let letter = 'o'.repeat(n);
-    return "g" + letter + "gle";
+      return "g" + 'o'.repeat(n) + "gle";
     }
 
 
@@ -98,7 +97,7 @@ function getTotalPath(path) {
     }
 
     return totalPath;
-}
+} 
 
 
 
