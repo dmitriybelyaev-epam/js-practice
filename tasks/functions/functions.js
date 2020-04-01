@@ -3,8 +3,12 @@
  *
  */
 function add(a, b) {
-
+    return (a + b);
 }
+
+console.log(add(1, 2));
+console.log(add(-1, 2)); 
+console.log(add(-1, -2));
 
 /**
  * write function that return first and last name of given object
@@ -14,33 +18,51 @@ function add(a, b) {
  *    lastName: "Dou"
  * }
  */
-function getFullName(object) {
 
+function getFullName(object) {
+    return (object.firstName + " " + object.lastName);
 }
+console.log(getFullName("John", "Dou"));
+
 
 /**
  * write fuction that checks is number is odd
  * true if odd, false if even
  */
 function isOdd(n) {
-    
+    if (n % 2 === 0) {
+        return false;
+    } else {
+        return true;
+    }    
 }
 
 /**
  * write function that return shortest of words in given array
  * e.g ["one", "two", "three"] should return one
  */
-function getShortest(wordArray) {
 
+function getShortest(wordArray) {
+var shortestWord = wordArray[0];
+    for (var i = 1; i < wordArray.length; i++) {   
+        if (wordArray[i].length < shortestWord.length)   {
+        shortestWord = wordArray[i];  
+          }
+    }
+return shortestWord;
 }
+
 
 /**
  * write function that returns word google with given numbers of "o" symbols
  * e.g getGoogle(5) should return "gooooogle"
  */
-function getGoogle(n) {
 
-}
+function getGoogle(n) {
+      return "g" + 'o'.repeat(n) + "gle";
+    }
+
+
 
 /**
  * write function that returns object based on given information (params may be null)
@@ -51,8 +73,14 @@ function getGoogle(n) {
  *    age: 42
  * }
  */
-function getUser(firstName, lastName, age) {
-    
+
+function getUser(firstName = null, lastName = null, age = null) {
+
+    return {
+        firstName,
+        lastName,
+        age 
+    };
 }
 
 /**
@@ -62,8 +90,15 @@ function getUser(firstName, lastName, age) {
  */
 
 function getTotalPath(path) {
-    
-}
+    let totalPath = 0;
+
+    for (let elem of path) {
+        totalPath += elem.distance;
+    }
+
+    return totalPath;
+} 
+
 
 
 module.exports = {
@@ -74,4 +109,4 @@ module.exports = {
     getGoogle,
     getUser,
     getTotalPath,
-};
+}; 

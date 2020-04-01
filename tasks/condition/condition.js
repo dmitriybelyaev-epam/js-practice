@@ -43,7 +43,7 @@ if (x < 10 && y < 10) {
 else {
   z = x * y;
 }
-
+  
 //Ternary operator
 
 const x = 3;
