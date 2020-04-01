@@ -84,7 +84,6 @@ function getUser(firstName = null, lastName = null, age = null) {
     };
 }
 
-
 /**
  * write function that calculates total path traveled.
  * path represended as array of objects with field distance and direction
