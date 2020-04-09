@@ -4,7 +4,12 @@
  * @param {string} str
  */
 function reverseString(str) {
+  if (typeof str != 'string') {
+    return 'This is not a string!';
+  }
+  return (str === '') ? '' : reverseString(str.substr(1)) + str.charAt(0);
 }
+
 
 /**
  * 1. Calculate a century by given year
@@ -12,15 +17,25 @@ function reverseString(str) {
 * @param {number} year
 */
 function centuryFromYear(year) {
+  var a = Math.ceil(year/100);
+  return a;
+} 
 
-}
 
 /**
  * Calculate count of the provided char in the string
  * @param {string} str
  * @param {string} char
  */
+
 function strCount(str, char) {
+  let regex = new RegExp( char, 'g' );
+
+  if (str.match(regex) == null) {
+  return 0;
+  } else {
+    return str.match(regex).length;
+  }
 }
 
 /**
@@ -30,6 +45,11 @@ function strCount(str, char) {
  * @param {num} num - by wht amount of chars it should be truncated
  */
 function truncateString(str, num) {
+  if (str.length <= num) {
+  return str;
+  } else {
+  return str.slice(0,num) + '...';
+  }
 }
 
 /**
@@ -40,8 +60,9 @@ function truncateString(str, num) {
  * console.log(replace10("231054")) // 23ten54
  */
 function replace10(text) {
-
+  return text.replace(/10/gi, 'ten')
 }
+
 
 /**
  * replace value in square brackets with CONFIDENTIAL
@@ -50,9 +71,11 @@ function replace10(text) {
  * @example
  * console.log(replaceConfidential("lorem [ipsum] si dolor")) // lorem [CONFIDENTIAL] si dolor
  */
-function replaceConfidential(text) {
 
-}
+function replaceConfidential(text) {
+  return text.replace(/\[[^\]]+\]/gi, '[CONFIDENTIAL]')
+  }
+
 
 module.exports = {
   reverseString,
@@ -62,3 +85,5 @@ module.exports = {
   replace10,
   replaceConfidential
 };
+
+
