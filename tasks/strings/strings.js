@@ -17,10 +17,8 @@ function reverseString(str) {
 * @param {number} year
 */
 function centuryFromYear(year) {
-  var a = Math.ceil(year/100);
-  return a;
+  return Math.ceil(year / 100);
 } 
-
 
 /**
  * Calculate count of the provided char in the string

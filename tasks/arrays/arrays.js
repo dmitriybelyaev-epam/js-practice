@@ -15,11 +15,11 @@ function reverseString(str) {
  */
 
 function getCharactersNames(chars) {
-  var AdultSwim = [];
-  for (var p in chars) {
-    AdultSwim.push(chars[p].name);
+  var adultSwim = [];
+  for (var p of chars) {
+    adultSwim.push(p.name);
   }
-  return AdultSwim;
+  return adultSwim;
 }
 
 /**
@@ -27,30 +27,23 @@ function getCharactersNames(chars) {
  */
 
 function printCharacterNames(chars) {
-  for (var p in chars) {
-    console.log(chars[p].name);    //the same as ["name"] without .
+  for (var p of chars) {
+    console.log(p.name);    //the same as ["name"] without .
   }
 }
 
 /**
  * return an array of non-human characters
  */
-function getNonHumanCharacters(chars) {
-  var allNonHumans = [];
-  for (var poo in chars) {
-    var char = chars[poo];
-    if (char.species !== "Human") {
-      allNonHumans.push(char);
-    }
-  } 
-  return allNonHumans;
-}
+
+const getNonHumanCharacters = (chars) => chars.filter((char => char.species != 'Human'));
+
 
 /**
  * return info about character named 'Jerry Smith'
  */
 function getJerryInfo(chars) {
-          var thereYouAre = chars.find (jerry => jerry.name === 'Jerry Smith');
+          let thereYouAre = chars.find (jerry => jerry.name === 'Jerry Smith');
           return thereYouAre;
 }
 
@@ -99,3 +92,6 @@ module.exports = {
     isAnyFishPerson,
     minItem
 };
+
+
+
