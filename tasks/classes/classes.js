@@ -23,12 +23,11 @@ class Person {
  */
 //put your code here
 
-class Student extends class Person {
+class Student {
     constructor(grade, firstName, lastName) {
     super(firstName, lastName); 
     this.grade = grade;
     }
-
     getGrade() {
         return this.grade;
     }
