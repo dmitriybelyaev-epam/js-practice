@@ -77,7 +77,6 @@ var x;
 for (x of substr) 
   console.log(x);
 
-
 /**
  * calculate a total of income of certain person
  */
