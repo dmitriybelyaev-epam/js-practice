@@ -23,19 +23,18 @@ class Person {
  */
 //put your code here
 
-class Student {
-    constructor(grade, firstName, lastName) {
+class Student extends Person {
+    constructor(firstName, lastName, grade) {
     super(firstName, lastName); 
     this.grade = grade;
     }
     getGrade() {
         return this.grade;
     }
-
 }
 
 const person = new Person('John', 'Dough');
-const student = new Student(5, 'John', 'Dough')
+const student = new Student('John', 'Dough', 5);
 
 module.exports = {
     person,
