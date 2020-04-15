@@ -14,6 +14,7 @@ class Person {
     getFullName() {
         return this.firstName + " " + this.lastName;
     }
+}
 
 /**
  * implement class Student that extends Person with:
