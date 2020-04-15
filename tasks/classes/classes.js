@@ -24,7 +24,7 @@ class Person {
 //put your code here
 
 class Student extends Person {
-    constructor(grade, firstName, lastName) {
+    constructor(firstName, lastName, grade) {
         super(firstName, lastName);
         this.grade = grade;
     }
@@ -35,7 +35,7 @@ class Student extends Person {
 }
 
 const person = new Person('John', 'Dough');
-const student = new Student(5, 'John', 'Dough')
+const student = new Student('John', 'Dough', 5)
 
 module.exports = {
     person,
