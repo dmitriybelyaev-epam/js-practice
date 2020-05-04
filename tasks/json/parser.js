@@ -16,7 +16,6 @@
  */
 
 fs = require('fs');
-const path = require('path');
 
 const test_json = require('./test.json');
 const parsed_json = test_json.list.entries.map(({ entry }) => ({
@@ -25,7 +24,5 @@ const parsed_json = test_json.list.entries.map(({ entry }) => ({
 fs.writeFile('./tasks/json/parsed.json', JSON.stringify(parsed_json), (err) => {
     if (err) {
         throw err;
-    } else {
-        console.log('Booyah!!');
-    }
+    } 
 });
